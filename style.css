@@ -1,0 +1,85 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Gradient Bergerak */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ff758c, #ff7eb3);
+    background-size: 200% 200%;
+    animation: gradientBG 6s ease infinite;
+}
+
+/* Animasi Gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Kontainer */
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Efek Zoom In & Out */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Animasi Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.delay {
+    animation-delay: 0.5s;
+}
+
+/* Tombol */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff758c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+/* Efek Hover & Klik */
+button:hover {
+    background: #ff5a75;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
