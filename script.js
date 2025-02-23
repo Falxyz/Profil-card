@@ -1,3 +1,4 @@
-document.querySelector(".contact-btn").addEventListener("click", function() {
-    alert("Halo! Ini kontak saya: 6283870408904");
+document.getElementById("contact-btn").addEventListener("click", function(event) {
+    event.preventDefault(); // Mencegah link berpindah halaman
+    alert("Halo! Ini adalah kontak saya: 6283870408904");
 });
